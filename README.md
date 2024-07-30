@@ -68,10 +68,6 @@
    директории проекта, то
    используйте [настройку](https://python-poetry.org/docs/configuration/#adding-or-updating-a-configuration-setting) `virtualenvs.in-project`
 
-3. **Docker**
-- [Документация](https://docs.docker.com/)
-- [Установка docker на Linux](https://docs.docker.com/engine/install/ubuntu/)
-- [Установка docker на Windows](https://docs.docker.com/desktop/install/windows-install/)
 
 # Разворачиваем проект локально
 
@@ -101,10 +97,6 @@ cd fix_price_scrapy
 
 В корневой папке создаем файл `.env` и заполняем его по примеру из `.env_example`, если у вас есть собственный proxy, можете записать туда свои данные, либо взять из примера.
 
-Поднимаем контейнеры
-```shell
-sudo docker-compose up --build
-```
 Ждем, пока паук отработает и команда закончит свое выполнение, открываем файл `fix_price.json` и смотрим результат
 
 - Если вы хотите изменить категории для парсинга (можно изменить только категории, нельзя менять сайт!), перейдите в файл `fix_price_scrapy/settings.py` и замените ссылки из `START_URLS` на свои собственные.
